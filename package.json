@@ -1,0 +1,34 @@
+{
+  "name": "email-service-api",
+  "version": "1.0.0",
+  "description": "Simple API to expose email sending functionalities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishahs08/email-service.git"
+  },
+  "keywords": [
+    "email",
+    "service",
+    "email-service",
+    "email-api",
+    "send",
+    "emails",
+    "email",
+    "sending",
+    "api"
+  ],
+  "author": "Nisha Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishahs08/email-service/issues"
+  },
+  "homepage": "https://github.com/nishahs08/email-service#readme",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.3"
+  }
+}
