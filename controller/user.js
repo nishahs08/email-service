@@ -14,7 +14,20 @@ const userController = {
          })
          .then(data => res.json(data))
          .catch(err => res.json(err));
-    }
+    },
+
+    listOfUsers :  (req, res)=> {
+  User.find({}, function(err, users) {
+    var userMap = {};
+
+    users.forEach(function(user) {
+      userMap[user._id] = user;
+      console.log(userMap);
+    });
+
+    res.send(userMap);  
+  })
+}
 };
 
 module.exports = userController;
