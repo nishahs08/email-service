@@ -6,17 +6,12 @@ passport.serializeUser(function(user, done) {
   done(null, user.username);
 });
 
-/*
-* Attaching a function to deserialize the user from the passport session.
-* DeSerializing the process of fetching the user data from the only param stored in passport session.
-*/
 passport.deserializeUser(function(id, done) {
   User.findOne({ username: id })
     .then(user => done(user))
     .catch(err => done(null, false))
 });
 
-// Have renamed the localstrategy to be used by name local
 passport.use('local', new LocalStrategy(
   function(username, password, done) {
     console.log('ASDAS');
