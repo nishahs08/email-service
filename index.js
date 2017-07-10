@@ -1,7 +1,7 @@
+"use strict";
+
 const app = require('./bootstrap/app')
 
-
-"use strict";
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/users',function(){
