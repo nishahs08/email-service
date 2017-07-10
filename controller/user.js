@@ -11,12 +11,9 @@ const userController = {
          User.create({
              username : req.body.username,
             password : req.body.password
-         },function(err,user){
-             console.log(err);
-             console.log('successfull');
-             console.log(user)
-             res.send();
-         });
+         })
+         .then(data => res.json(data))
+         .catch(err => res.json(err));
     }
 };
 
