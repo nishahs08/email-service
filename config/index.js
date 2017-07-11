@@ -3,6 +3,7 @@
 // Attach env file options on to process.env
 require('dotenv').config();
 
+const expressConfig = require('./express');
 const dbConfig = require('./db');
 const router = require('./routers');
 
@@ -12,11 +13,10 @@ const bodyParser = require('body-parser');
 // This function accepts a reference to express app.
 function ConfigureApp (app) {
 	dbConfig();
-	app.use(bodyParser.urlencoded({ extended: true }));
-	app.use(bodyParser.json());
 
-	// Mounting imported router on api/v1 path
-	app.use('/api/v1', router);
+	expressConfig.configureExpress(app);
+	
+	console.log('hkh');
+	console.log("nisha singh",expressConfig);
 }
-
 module.exports = ConfigureApp;
